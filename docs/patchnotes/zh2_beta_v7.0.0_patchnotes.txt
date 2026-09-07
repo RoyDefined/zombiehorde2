@@ -1,0 +1,12 @@
+API changes (Could contain breaking changes for mappers. Make sure to check this list for migrations)
+------------------------------------------------
+
+* * Renamed several `#define` names for naming consistency * *
+Various `#define` names across the core mod and library smashed multiple words together without any separation (e.g. `EVENTSPREFIXKEY`), or used inconsistent casing.
+These have all been renamed to consistently use `UPPER_SNAKE_CASE`, with words separated by underscores. Established compound terms that already read clearly (e.g. `HUDID`, weapon names like `SHOTGUN`/`RIOTGUN`, `AMBIENTWEATHER`) were intentionally left as-is.
+See `zh2_beta_v7.0.0_define_renames.txt` in this same folder for the full list of old -> new names. If your map directly references any of them, update it to the new name.
+
+Other mod changes
+------------------------------------------------
+
+- Renamed several internal library and core source files/folders for naming consistency (e.g. `afkprevention` -> `afk_prevention`, `translucentallies.acs` -> `translucent_allies.acs`, `prepostscript.acs` -> `pre_post_script.acs`). This is internal only and does not affect maps.
