@@ -107,7 +107,7 @@ strict namespace Map
     internal void SetPlayerPickCooldown(int id)
     {
         VALIDATE_IS_SERVERSIDE_FUNCTION();
-        int timestamp = Utils::GetSynchronizedTimer() + ZH2Game::GetPlayerCooldownTics();
+        int timestamp = Utils::GetSynchronizedTimer() + CVar::GetPlayerCooldownTics();
         SetPlayerCooldownTics(id, timestamp);
     }
 }

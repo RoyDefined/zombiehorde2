@@ -20,24 +20,24 @@ strict namespace Hud
     // Draws the parts of the hud that are not specific to any skin.
     internal void DrawSharedHud()
     {
-        bool drawHud = ZH2Game::GetDrawHud();
+        bool drawHud = CVar::GetDrawHud();
 
         if (Round::GetActiveKnownRoundState() == Round::STATEPLAYING)
             DrawFullServerHud();
 
-        if (drawHud && ZH2Game::GetDrawVersionHud())
+        if (drawHud && CVar::GetDrawVersionHud())
             DrawVersion();
 
-        if (drawHud && ZH2Game::GetDrawRoundHud())
+        if (drawHud && CVar::GetDrawRoundHud())
             DrawRoundHud();
 
         // All of this is strictly during the playing game.
         if (Round::GetActiveKnownRoundState() < Round::STATEENDING)
         {
-            if (drawHud && ZH2Game::GetDrawResistsHud())
+            if (drawHud && CVar::GetDrawResistsHud())
                 DrawResistsHud();
 
-            if (drawHud && ZH2Game::GetDrawDebugHud())
+            if (drawHud && CVar::GetDrawDebugHud())
                 DrawDebugHud();
 
             // NOTE: We do NOT allow drawing of the admin hud during the voting, because it is also clickable.
@@ -67,10 +67,10 @@ strict namespace Hud
                 DrawBlurHud();
             }
 
-            if (drawHud && ZH2Game::GetDrawGameHud())
+            if (drawHud && CVar::GetDrawGameHud())
                 DrawZombieTeleportTime();
 
-            if (drawHud && ZH2Game::GetDrawObituaryHud())
+            if (drawHud && CVar::GetDrawObituaryHud())
                 DrawObituaryHud();
 
             DrawDamageFeedback();

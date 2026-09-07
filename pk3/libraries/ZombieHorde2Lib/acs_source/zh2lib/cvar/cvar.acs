@@ -2,7 +2,7 @@
     #error This file must be #included.
 #endif
 
-strict namespace ZH2Lib
+strict namespace CVar
 {
     // Logging
     internal int GetClientOverwriteLogSeverity() { return BCSUTILS::Clamp(GetCvar("cl_zh2_overridelogseverity"), 0, 5); }

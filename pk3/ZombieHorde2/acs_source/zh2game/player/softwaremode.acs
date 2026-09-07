@@ -12,7 +12,7 @@ strict namespace Player
         if (!BCSUtils::IsOpenGL())
             return;
 
-        if (!ZH2Game::GetRemoveSoftwareTextures())
+        if (!CVar::GetRemoveSoftwareTextures())
             return;
 
         // Replace using lump reading.

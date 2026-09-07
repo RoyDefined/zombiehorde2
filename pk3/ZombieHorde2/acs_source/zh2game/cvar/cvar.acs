@@ -2,7 +2,7 @@
     #error This file must be #included.
 #endif
 
-strict namespace ZH2Game
+strict namespace CVar
 {
     // Admin
     internal bool GetClAdminSpawnBotInFront(int playerId) { return (bool)GetUserCvar(playerId, "cl_zh2_adminspawnbotinfront"); }

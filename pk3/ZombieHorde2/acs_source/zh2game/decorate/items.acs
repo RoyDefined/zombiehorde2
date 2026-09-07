@@ -6,7 +6,7 @@ strict namespace Decorate
 {
     script "zh2_dec_checkautousekevlar"
     {
-        if (!ZH2Game::GetDisableAutoUseItems() && ZH2Game::GetAutoUseKevlars(PlayerNumber()))
+        if (!CVar::GetDisableAutoUseItems() && CVar::GetAutoUseKevlars(PlayerNumber()))
             UseKevlar();
     }
 
@@ -32,7 +32,7 @@ strict namespace Decorate
 
     script "zh2_dec_checkautouseenergy"
     {
-        if (!ZH2Game::GetDisableAutoUseItems() && ZH2Game::GetAutoUseEnergyDrinks(PlayerNumber()))
+        if (!CVar::GetDisableAutoUseItems() && CVar::GetAutoUseEnergyDrinks(PlayerNumber()))
             UseEnergy();
     }
 
@@ -68,7 +68,7 @@ strict namespace Decorate
 
     script "zh2_dec_checkautousemedikit"
     {
-        if (!ZH2Game::GetDisableAutoUseItems() && ZH2Game::GetAutoUseMedikits(PlayerNumber()))
+        if (!CVar::GetDisableAutoUseItems() && CVar::GetAutoUseMedikits(PlayerNumber()))
             UseMedikit();
     }
 
