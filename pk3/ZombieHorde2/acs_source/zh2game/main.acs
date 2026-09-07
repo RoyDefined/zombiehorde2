@@ -35,7 +35,7 @@
 #define LOGSOURCE "Main"
 
 #include "scriptevents.acs"
-#include "cvars.acs"
+#include "cvar/cvar.acs"
 #include "binds.acs"
 
 #define SCRIPT_ENTER_RESPAWN_NAME "zh2_internal_enter_respawn"
